@@ -1,13 +1,5 @@
 #include <algorithm>
 #include <cstdio>
-#include <cstring>
-#include <iostream>
-#include <map>
-#include <queue>
-#include <set>
-#include <string>
-#include <utility>
-#include <vector>
 
 #define MAXN 200000
 #define MAXM 20
@@ -16,7 +8,6 @@
 using namespace std;
 
 typedef long long ll;
-typedef long double ld;
 
 int h[MAXN], a[MAXM], b[MAXM], u[MAXM], d[MAXM];
 
@@ -51,16 +42,16 @@ int main() {
       }
     }
 
-    int lowT = 0, hiT = 2 * MAXUD;
+    int lowT = 0, hiT = MAXUD * 2;
     while(lowT < hiT) {
       int t = (hiT + lowT) / 2;
 
       int downBound = max(0, h[0] * 2 - t);
-      int upBound = min(2 * MAXUD, h[0] * 2 + t);
+      int upBound = min(MAXUD * 2, h[0] * 2 + t);
       bool found = true;
       for(int i = 1; i < n; i++) {
         downBound = max(0, max(downBound - jumpD[i - 1] * 2, h[i] * 2 - t));
-        upBound = min(2 * MAXUD, min(upBound + jumpU[i - 1] * 2, h[i] * 2 + t));
+        upBound = min(MAXUD * 2, min(upBound + jumpU[i - 1] * 2, h[i] * 2 + t));
         if(downBound > upBound) { found = false; break; }
       }
       if(!found) lowT = t + 1;

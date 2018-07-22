@@ -1,7 +1,6 @@
 #include <cstdio>
 #include <cstring>
 #include <vector>
-#include <iostream>
 
 #define MAXN 2000
 
@@ -10,8 +9,7 @@ using namespace std;
 vector<int> adjs[MAXN];
 
 vector<int> pre, post;
-int preOrder[MAXN], postOrder[MAXN], label[MAXN];
-
+int revPre[MAXN], label[MAXN];
 bool visited[MAXN];
 
 void dfs(int k) {
@@ -19,12 +17,11 @@ void dfs(int k) {
   visited[k] = true;
 
   pre.push_back(k);
-  preOrder[k] = (int) pre.size() - 1;
+  revPre[k] = (int) pre.size() - 1;
   for(int adj : adjs[k]) {
     dfs(adj);
   }
   post.push_back(k);
-  postOrder[k] = (int) post.size() - 1;
 }
 
 int main() {
@@ -53,7 +50,7 @@ int main() {
       int idx = i;
       while(label[post[idx]] != newLabel) {
         label[pre[idx]] = label[post[idx]] = newLabel;
-        idx = preOrder[post[idx]];
+        idx = revPre[post[idx]];
       }
     }
 
