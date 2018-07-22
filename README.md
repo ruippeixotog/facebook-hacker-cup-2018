@@ -28,7 +28,16 @@ The following is the list of the problems solved. Each problem identifier is spe
 * ✓ [30: Interception][qual2] (`interception`)
 * ✓ [45: Ethan Searches for a String][qual3] (`ethan-searches-for-a-string`)
 
+### Round 1
+
+* ✓ [15: Let It Flow][round11] (`let-it-flow`)
+* ✓ [20: Ethan Traverses a Tree][round12] (`ethan-traverses-a-tree`)
+* ✓ [28: Platform Parkour][round13] (`platform-parkour`)
+
 [1]: https://www.facebook.com/hackercup
 [qual1]: https://www.facebook.com/hackercup/problem/1632703893518337/
 [qual2]: https://www.facebook.com/hackercup/problem/175329729852444/
 [qual3]: https://www.facebook.com/hackercup/problem/1153996538071503/
+[round11]: https://www.facebook.com/hackercup/problem/180494849326631/
+[round12]: https://www.facebook.com/hackercup/problem/232395994158286/
+[round13]: https://www.facebook.com/hackercup/problem/1892930427431211/
