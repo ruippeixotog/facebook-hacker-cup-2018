@@ -34,6 +34,11 @@ The following is the list of the problems solved. Each problem identifier is spe
 * ✓ [20: Ethan Traverses a Tree][round12] (`ethan-traverses-a-tree`)
 * ✓ [28: Platform Parkour][round13] (`platform-parkour`)
 
+### Round 2
+
+* ✓ [8: Ethan Finds the Shortest Path][round21] (`ethan-finds-the-shortest-path`)
+* ✓ [20: Jack's Candy Shop][round22] (`jacks-candy-shop`)
+
 [1]: https://www.facebook.com/hackercup
 [qual1]: https://www.facebook.com/hackercup/problem/1632703893518337/
 [qual2]: https://www.facebook.com/hackercup/problem/175329729852444/
@@ -41,3 +46,5 @@ The following is the list of the problems solved. Each problem identifier is spe
 [round11]: https://www.facebook.com/hackercup/problem/180494849326631/
 [round12]: https://www.facebook.com/hackercup/problem/232395994158286/
 [round13]: https://www.facebook.com/hackercup/problem/1892930427431211/
+[round21]: https://www.facebook.com/hackercup/problem/988017871357549/
+[round22]: https://www.facebook.com/hackercup/problem/638251746380051/
