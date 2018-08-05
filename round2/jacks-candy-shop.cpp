@@ -1,25 +1,18 @@
 #include <algorithm>
 #include <cstdio>
-#include <cstring>
-#include <iostream>
-#include <map>
 #include <queue>
-#include <set>
-#include <string>
-#include <utility>
 #include <vector>
 
-#define MAXN 200001
-#define MAXM 1000001
+#define MAXN 200000
+#define MAXM 1000000
 
 using namespace std;
 
 typedef long long ll;
-typedef long double ld;
 
-int p[MAXN], c[MAXM];
-
+int c[MAXM];
 vector<int> children[MAXN];
+
 int height[MAXN];
 priority_queue<int>* bestCandies[MAXN];
 
@@ -66,13 +59,12 @@ int main() {
   int t; scanf("%d\n", &t);
   for(int tc = 1; tc <= t; tc++) {
     int n, m, a, b; scanf("%d %d %d %d\n", &n, &m, &a, &b);
-    p[0] = -1;
     for(int i = 0; i < n; i++) {
       children[i].clear();
     }
     for(int i = 1; i < n; i++) {
-      scanf("%d\n", &p[i]);
-      children[p[i]].push_back(i);
+      int pi; scanf("%d\n", &pi);
+      children[pi].push_back(i);
     }
     for(int i = 0; i < m; i++) {
       c[i] = (int) ((a * (ll) i + b) % n);
